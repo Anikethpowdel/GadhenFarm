@@ -1,28 +1,40 @@
+import { fadeInLeft, fadeInRight, fadeInUp, staggerContainer } from "@/lib/animations";
 import { motion } from "framer-motion";
-import { fadeInLeft, fadeInRight, staggerContainer, fadeInUp } from "@/lib/animations";
 import { Linkedin, Mail } from "lucide-react";
 
 const teamMembers = [
   {
-    name: "Tenzin Dorji",
-    title: "Agricultural Engineer",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+    name: "Suzal Wakhley",
+    title: "Head of Design and Development and Co-Founder",
+    image: "/images/assets/team/Suzal.png"
   },
   {
-    name: "Pema Wangchuk",
-    title: "IoT Specialist",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+    name: "Aniketh Powdel",
+    title: "CTO & Co-Founder",
+    image: "/images/assets/team/Aniketh.png"
   },
   {
-    name: "Karma Tshering",
-    title: "Software Developer",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+    name: "Sherab Choejur Dorji",
+    title: "CEO & Co-Founder",
+    image: "/images/assets/team/Sherab.png"
   },
   {
-    name: "Deki Yangzom",
-    title: "Business Development",
-    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+    name: "Nima Tamang",
+    title: "IOT Specialist and Co-Founder",
+    image: "/images/assets/team/Nima.png"
+  },
+  {
+    name: "Tenzin Pelden",
+    title: "Finance Specialist",
+    image: "/images/assets/team/Tenzin.png"
   }
+  ,
+  {
+    name: "Tshering Kibu",    
+    title: "Marketing Specialist and founder of Urban Farm ",
+    image: "/images/assets/team/Kibu.png"
+  }           
+ 
 ];
 
 export function AboutSection() {
@@ -61,7 +73,6 @@ export function AboutSection() {
             <div className="relative h-96 rounded-xl overflow-hidden shadow-xl">
               <img 
                 src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                alt="Bhutanese greenhouse farming" 
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-60"></div>
@@ -77,7 +88,7 @@ export function AboutSection() {
         <div className="mt-20">
           <h3 className="text-2xl md:text-3xl font-bold text-primary font-inter mb-10 text-center">Our Team & Partners</h3>
           <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+            className="flex space-x-8 overflow-x-auto pb-4"
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
@@ -86,7 +97,7 @@ export function AboutSection() {
             {teamMembers.map((member, index) => (
               <motion.div 
                 key={index}
-                className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+                className="min-w-[250px] bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
                 variants={fadeInUp}
                 custom={index * 0.1}
               >

@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
+import { AnimatePresence, motion, useAnimation } from "framer-motion";
+import { ChevronRight, Leaf, Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
 import { Link } from "wouter";
-import { Leaf, Menu, X, ChevronRight } from "lucide-react";
-import { motion, AnimatePresence, useAnimation } from "framer-motion";
 
 const navLinks = [
   { name: "Home", href: "#", isActive: true },
@@ -69,7 +69,7 @@ export function SiteHeader() {
                 <Leaf className="text-[#083932] h-5 w-5 z-10 group-hover:rotate-12 transition-transform duration-300" />
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
               </div>
-              <span className="ml-3 text-xl font-bold text-white font-inter group-hover:text-[#B1D931] transition-colors duration-300">GreenSense</span>
+              <span className="ml-3 text-xl font-bold text-white font-inter group-hover:text-[#B1D931] transition-colors duration-300">GadenFarm</span>
             </Link>
           </motion.div>
           

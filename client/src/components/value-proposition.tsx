@@ -1,6 +1,6 @@
+import { fadeInUp, staggerContainer } from "@/lib/animations";
 import { motion } from "framer-motion";
-import { staggerContainer, fadeInUp } from "@/lib/animations";
-import { LineChart, Bot, Wrench, Smartphone } from "lucide-react";
+import { Bot, LineChart, Smartphone, Wrench } from "lucide-react";
 
 const valueProps = [
   {
