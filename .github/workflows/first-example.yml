@@ -7,6 +7,8 @@ jobs:
         steps:
         - name: welcome message
           run: echo "welcome"
+        - name: checking out the br 
+          uses: actions/checkout@v4
         - name: listing the file
           run: ls
         - name: install
