@@ -1,0 +1,14 @@
+name: First work-flow
+on: push 
+
+jobs: 
+    first__jobs:
+        runs-on: ubuntu-latest
+        steps:
+        - name: welcome message
+          run: echo "welcome"
+        - name: listing the file
+          run: ls
+        - name: install
+          run: npm install 
+        
